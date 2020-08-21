@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Educational registration form</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+
+  </head>
+  <body>
+    <div class="main-block">
+      <div class="left-part">
+        <i class="fas fa-graduation-cap"></i>
+        <h1>Register to bughoppers  </h1>
+        <p>BugHoppers provides you the solution to your coding problems.</p>
+      </div>
+      
+
+      <form [formGroup]='form' (ngSubmit)="onSubmit(name,email,mobile,password,password1,skills)">
+        
+        
+        <div class="title">
+          <i class="fas fa-pencil-alt"></i> 
+          <h2>Register here</h2>
+        </div>
+        <div class="info">
+          <input class="fname" formControlName="name" type="text" name="name" placeholder="Full name">
+          <input type="text"formControlName="email" name="name" placeholder="Email">
+          <input type="text" formControlName="mobile" name="name" placeholder="Phone number">
+          <input  formControlName="password" type="password" name="name" placeholder="Password">
+          <input  type="password" formControlName="password1" name="name" placeholder="Confirm Password" >
+          <input type="text" formControlName="skills" name="name" placeholder="Skills">
+          <!-- <input type="text" formControlName="mobile" name="name" placeholder=""> -->
+          
+        </div>
+        <div class="checkbox">
+          <input type="checkbox" name="checkbox"><span>I agree to the <a (click)="tcp()"  routerLinkActive="active">Privacy Poalicy for W3Docs.</a></span>
+        </div>
+        <button type="submit" href="/">Submit</button>
+      </form>
+    </div>
+    <form [formGroup]='codeverify' (ngSubmit)="onCode(code)">
+        
+      <div class="info">
+        <input class="fname" formControlName="code" type="text" name="name" placeholder="Full name">
+        
+      </div>
+      <button type="submit" href="/">Submit</button>
+    </form>
+  </body>
+</html>
+
