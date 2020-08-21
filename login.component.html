@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Educational registration form</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+
+  </head>
+  <body>
+    <div class="main-block">
+      <div class="left-part">
+        <i class="fas fa-graduation-cap"></i>
+        <h1>welcome to bughoppers  </h1>
+        <p>BugHoppers provides you the solution to your coding problems.</p>
+      </div>
+      
+
+      <form [formGroup]='form' (ngSubmit)="OnSubmit(email,password)">
+        
+        
+        <div class="title">
+          <i class="fas fa-pencil-alt"></i> 
+          <h2>Login here</h2>
+        </div>
+        <div class="info">
+          <!-- <input class="fname" formControlName="name" type="text" name="name" placeholder="Full name"> -->
+          <input type="text"formControlName="email" name="name" placeholder="Email">
+          <input appAppPassword formControlName="password" type="password" name="name" placeholder="Password">
+        </div>
+        <div >
+          <a (click)="signuprouting()"  routerLinkActive="active">Signup.</a>
+        </div>
+        <button type="submit" href="/">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>
